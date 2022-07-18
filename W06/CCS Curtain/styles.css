@@ -1,0 +1,117 @@
+/*  we start creating the curtain design, we have 3 main parts the full curtain, 
+the left panel, and the right panel. what we try to do is to move both panels to the sides so you can see what is behind 
+the curtains, the panels will move from the center of the screen to the sides. */
+/* In terms of design the main thing is to have both panels always in front of the screen, 
+behind the panels there should be a "prize" that will be shown when both panels move.*/
+.curtain {
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* Before adding the animation when clicking on the panel the action that is performed is to change between the colors
+   of the panel that are black and orange, the animation that is added is to move both panels, 
+   the left one towards the flex-end and the right one towards the flex-start, 
+   the amount that moves is the same but in different directions of the coordinates, 
+   so the left one moves -100% and the right one 100% this is so that they go in opposite directions.
+ */
+  /*It is important to remember that the panel and the curtain are shown in the whole component that is why we use width and height 100%, 
+at the end when the animations are ready we have to gather all the parts and make sure that the text and the image is shown, 
+the text is divided in two and the image is positioned on the panel that will be at the bottom and making sure it is in the center using justify-content:center, 
+so when opening the panels that start from the center of the component the first thing you will see is the image.
+the text is also aligned to the center using text-align:center because most of the parts of the component are focused in the middle of the screen, 
+also for that reason the only change of percentages in the panels is 50% which leaves it in the middle of the component.
+ */
+}
+
+.curtain__wrapper {
+  width: 100%;
+  height: 100%;
+  /* We create a "checkbox" which helps us to click on the panels and that starts the animation, 
+    in this case we use a pseudo-class ":checked" which is associated with input elements of type radio or button 
+    but to create this check to perform the action will always be visible on the screen 
+    so we use the property opacity = 0 to hide it. */
+}
+
+.curtain__wrapper input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+
+.curtain__wrapper input[type=checkbox]:checked ~ div.curtain__panel--left {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.curtain__wrapper input[type=checkbox]:checked ~ div.curtain__panel--right {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.curtain__panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: orange;
+  color: #fff;
+  float: left;
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  z-index: 2;
+}
+
+.curtain__panel--left {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.curtain__panel--right {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.curtain__content {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #333;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 0;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  width: 100%;
+}
+
+.curtain__content img {
+  width: 20%;
+}
+/*# sourceMappingURL=styles.css.map */

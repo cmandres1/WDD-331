@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing Cards Backs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+   <!-- card -->
+    <svg width="400" height="600">
+        <defs>
+            <pattern id="pattern1" viewBox="0,0,10,10" width="10%" height="10%">
+                <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2" class="polygon1" />
+                <rect x="5" y="15" rx="1" ry="0" class="rectangle2" />
+            </pattern>
+            <symbol id="icon-html-five" viewBox="0 0 32 32">
+                <title>html-five</title>
+                <path d="M1.892 0l2.567 28.801 11.524 3.199 11.554-3.204 2.572-28.796h-28.216zM24.52 9.42h-13.517l0.322 3.617h12.874l-0.97 10.844-7.245 2.008-7.237-2.008-0.495-5.547h3.547l0.252 2.82 3.933 1.060 0.009-0.002 3.935-1.062 0.408-4.58h-12.242l-0.953-10.681h17.694l-0.316 3.532z"></path>
+              </symbol>
+        </defs>
+        <rect class="card1" x="50" y="10" ry="10" fill="url(#pattern1)" />
+        <rect class="rectangle1" x="100" y="130" ry="10" fill="url(#rectangle1)" />
+        
+        <use class="icon icon-html-five" xlink:href="#icon-html-five" width="100" x="130" y="-90"></use>
+    </svg>
+
+
+    
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+$font-family-1:"Arial, Helvetica, sans-serif"; 
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart {
+    &__container {
+        width: 20%;
+        height: 95%;
+        background-color: #FAF8FA;
+        box-shadow: 0px 25px 40px #1687d933;
+    }
+
+    &__header {
+        margin: auto;
+        width: 90%;
+        height: 15%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__heading {
+        font-size: 20px;
+        font-family: $font-family-1;
+        font-weight: 700;
+        color: gray;
+    }
+
+    &__number--items {
+        font-size: 20px;
+        font-family: $font-family-1;
+        cursor: pointer;background: gray;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        color: white;
+        display: inline-block;
+        font-weight: bold;
+        line-height: 40px;
+        margin-right: 5px;
+        text-align: center;
+        width: 40px;
+    }
+    &__item--list{
+        margin: auto;
+        width: 90%;
+        border: solid gray 1px;
+        border-radius: 5px;
+        background: white;
+    }
+    &__item1{
+        font-family: $font-family-1;
+        display: grid;
+        grid-template-columns: 100px 100px;
+        grid-template-rows: 15px;
+        justify-content: center;
+    }
+    &__item1--description{
+        color: gray;
+    }
+    &__item1--price{
+        color: gray;
+        text-align: right;
+        margin-right: 10px;
+    }
+    &__item2{
+        font-family: $font-family-1;
+        display: grid;
+        grid-template-columns: 100px 100px;
+        grid-template-rows: 15px;
+        justify-content: center;
+        border-top: solid gray 1px;
+    }
+    &__item2--description{
+        color: gray;
+    }
+    &__item2--price{
+        color: gray;
+        text-align: right;
+        margin-right: 10px;
+    }
+    &__item3{
+        font-family: $font-family-1;
+        display: grid;
+        grid-template-columns: 100px 100px;
+        grid-template-rows: 15px;
+        justify-content: center;
+        border-top: solid gray 1px;
+    }
+    &__item3--description{
+        color: gray;
+    }
+    &__item3--price{
+        color: gray;
+        text-align: right;
+        margin-right: 10px;
+    }
+    &__item4{
+        color: green;
+        font-family: $font-family-1;
+        display: grid;
+        grid-template-columns: 100px 100px;
+        grid-template-rows: 15px;
+        justify-content: center;
+        border-top: solid gray 1px;
+        background-color: #FAF8FA;
+    }
+    &__item4--price{
+        text-align: right;
+        margin-right: 10px;
+    }
+    &__item5{
+        font-family: $font-family-1;
+        display: grid;
+        grid-template-columns: 100px 100px;
+        grid-template-rows: 15px;
+        justify-content: center;
+        border-top: solid gray 1px;
+    }
+    &__item5--price{
+        color: black;
+        text-align: right;
+        margin-right: 10px;
+    }
+
+
+    &__promoCode{
+        display: flex;
+        margin: auto;
+        margin-top: 20px;
+        width: 90%;
+        justify-content: space-around;
+        border: solid gray 1px;
+        border-radius: 5px;
+        background: white;
+    }
+    &__promoCode--text{
+        display: grid;
+        grid-template-columns: 130px 70px;
+        grid-template-rows: 60px;
+        justify-content: center;
+        box-sizing: border-box;   
+    }
+    &__promoCode--text--code{
+        font-family: $font-family-1;
+        border: solid gray 1px;
+        text-align: left;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-left:-10px;
+        color: gray;
+        padding: 10px;
+    }
+    &__promoCode--text--redeem {
+        font-family: $font-family-1;
+        border: solid gray 1px;
+        align-items: center;
+        text-align: center;
+        color: white;
+        background: gray;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-right:-10px;
+        padding: 10px;
+    }
+}

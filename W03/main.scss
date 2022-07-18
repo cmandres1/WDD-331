@@ -1,0 +1,163 @@
+/* import google font   */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+//variables
+$fontFamily: 'Helvetica', 'Arial', sans-serif;
+$bodyColor: #333;
+$fontLora: 'Lora', serif;
+$borderColor: solid #d0d0d0 1px;
+$navHoverColor:#00ddff;
+$navActiveColor: #DEB887;
+
+// mixin 
+@mixin paragraph {
+    font-family: $fontFamily;
+    max-width: 600px;
+    font-size: 1.2rem;
+    padding-left: 25px;
+}
+
+/* font and color of the main part */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $fontFamily;
+    color: $bodyColor;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    padding-left: 25px;
+    font-family: $fontFamily;
+}
+
+p {
+    @include paragraph;
+}
+
+/* header and navigation bar content */
+
+header a {
+    font-family: $fontLora;
+    color: $bodyColor;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    display: grid;
+    list-style: none;
+    justify-items: center;
+    gap: 1.5rem;
+    margin-right: 20px;
+}
+
+nav {
+    a:hover {
+        background-color: $navHoverColor;
+    }
+    a:active {
+        background-color: $navActiveColor;
+    }
+}
+
+nav, .post-content {
+    border-top: $borderColor;
+}
+
+li a {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-family: $fontLora;
+}
+
+li a,
+section a {
+    color: #666;
+}
+
+/* borders to divide the page into sections */
+hr {
+    display: none;
+}
+
+main {
+    border-top: $borderColor;
+}
+
+
+/* books publication date */
+.post-date {
+    font-family: $fontLora;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    text-align: right;
+    margin: 2rem 0 .5rem 0;
+    border-right: $borderColor;
+}
+
+/* book information, name and image of the book cover */
+.post-content {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+
+
+/* mobile version of the page with necessary adjustments to show the changes */
+@media only screen and (min-width:900px) {
+
+    img {
+        padding-left: 175px;
+    }
+
+
+    ul {
+        display: flex;
+        justify-content: right;
+        gap: 2rem;
+    }
+
+    nav,
+    .post-content {
+        border: none;
+    }
+
+    .post-content {
+        border-bottom: $borderColor;
+        justify-items: left;
+        align-items: center;
+
+
+    }
+
+    nav {
+        border-top: $borderColor;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    p {
+        @include paragraph;
+    }
+
+}

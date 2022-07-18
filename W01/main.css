@@ -1,0 +1,153 @@
+/* import from google font   */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/* font and color of the main part */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    padding-left: 25px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+p {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    max-width: 600px;
+    font-size: 1.2rem;
+    padding-left: 25px;
+}
+
+/* header and navigation bar content */
+
+header a {
+    font-family: 'Lora', serif;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    display: grid;
+    list-style: none;
+    justify-items: center;
+    gap: 1.5rem;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    background-color: #00ddff;
+}
+
+nav a:active {
+    background-color: #DEB887;
+}
+
+nav,
+.post-content {
+    border-top: solid #d0d0d0 1px;
+}
+
+li a {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-family: 'Lora', serif;
+}
+
+li a,
+section a {
+    color: #666;
+}
+
+/* borders to divide the page into sections */
+hr {
+    display: none;
+}
+
+main {
+    border-top: solid #d0d0d0 1px;
+}
+
+
+/* books publication date */
+.post-date {
+    font-family: 'Lora', serif;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    text-align: right;
+    margin: 2rem 0 .5rem 0;
+    border-right: solid #d0d0d0 1px;
+}
+
+/* book information, name and image of the book cover */
+.post-content {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+
+
+/* mobile version of the page with necessary adjustments to show the changes */
+@media only screen and (min-width:900px) {
+
+    img {
+        padding-left: 175px;
+    }
+
+
+    ul {
+        display: flex;
+        justify-content: right;
+        gap: 2rem;
+    }
+
+    nav,
+    .post-content {
+        border: none;
+    }
+
+    .post-content {
+        border-bottom: solid #d0d0d0 1px;
+        justify-items: left;
+        align-items: center;
+
+
+    }
+
+    nav {
+        border-top: solid #d0d0d0 1px;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    p {
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        max-width: 600px;
+        font-size: 1.2rem;
+        padding-left: 25px;
+    }
+
+}

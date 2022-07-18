@@ -1,0 +1,42 @@
+//row grid section
+//top side of the screen
+.row-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+    text-align: center;
+}
+
+.row-grid .card {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+.row-grid img {
+    width: 100%;
+    height: 70%;
+}
+
+//col grid section
+//button side of the screen
+
+.col-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 500px;
+    gap: 10px;
+}
+
+.col-grid img {
+    width: 100%;
+    height: 75%;
+}
+
+.col-grid .card {
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
